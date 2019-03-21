@@ -20,10 +20,16 @@ class Reviews extends Component {
         <div>
           <button onClick={this.toggleReviews}>Toggle Reviews</button>
           {this.state.product.reviewsArray.map((review, index) => {
+            const rating = review.rating;
+            const stars = [];
+            for (let i = 0; i < rating; i++) {
+              stars.push(<span key={i} className="glyphicon glyphicon-star" />);
+            }
             return (
-              <div key={index}>
+              <div key={index} style={{ border: "1px solid black" }}>
                 {review.description}
-                {review.rating}
+                <br />
+                {stars}
               </div>
             );
           })}
