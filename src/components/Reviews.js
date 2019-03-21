@@ -35,15 +35,14 @@ class Reviews extends Component {
           })}
         </div>
       );
-    } else {
-      return (
-        <div>
-          <button type="button" onClick={this.toggleReviews}>
-            Toggle Reviews
-          </button>
-        </div>
-      );
     }
+    return (
+      <div>
+        <button type="button" onClick={this.toggleReviews}>
+          Toggle Reviews
+        </button>
+      </div>
+    );
   }
 }
 
